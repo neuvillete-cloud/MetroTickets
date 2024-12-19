@@ -1,0 +1,263 @@
+/*Colores principales*/
+:root {
+    --main-color: #005195;
+    --color_gold: #B4AA9B;
+    --gold_70: #CAC2B6;
+
+    --color-sky: #82AFD7;
+    --blue_70: #A4C6E2;
+    --blue_45: #C4DAEC;
+    --blue_20: #E5EEF7;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#containerNavAdmin{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0.75rem;
+    margin-bottom: 0.8rem;
+}
+nav,#containerNavAdmin {
+    background-color: var(--main-color);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Cambia float a inline-block para que los elementos se puedan centrar */
+    margin-right: 1rem; /* Añade un margen derecho entre los elementos para separarlos */
+}
+
+nav ul li a {
+    display: block;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+nav ul li a:hover {
+    background-color: var(--color_gold);
+    color: var(--main-color)
+}
+.container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+h3{
+    margin-top: 4rem;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#tablaClientes thead tr,#tablaPlataformas thead tr,
+#tablaMateriales thead tr,  #tablaUsuarios thead tr {
+    background: #EFEDE9;
+}
+#tablaClientes thead th,#tablaPlataformas thead th,
+#tablaMateriales thead th, #tablaUsuarios thead th  {
+    text-align: center;
+    color:#EFEDE9;
+    margin:0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--main-color);
+}
+#tablaClientes tbody td,#tablaPlataformas tbody td,
+#tablaMateriales tbody td, #tablaUsuarios tbody td {
+    color: #444;
+    text-align: center; /* Centrado horizontal */
+    vertical-align: middle; /* Centrado vertical */
+}
+td{
+    text-align: center;
+}
+
+#tablaClientes tbody tr,#tablaPlataformas tbody tr,
+#tablaMateriales tbody tr, #tablaUsuarios tbody tr {
+    border-bottom: 1px solid #dee2e8;
+}
+#tablaMateriales img{
+    width: 90px;
+    height: 60px;
+}
+.btnDesactivar{
+    margin-left: 1rem;
+}
+
+.btn-primary{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+#divImagenMaterialE {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+#nombreUsuarioE, #correoE {
+    background-color: transparent;
+    border: none;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+#fotoUsuarioE{
+    max-width: 200px;
+}
+#divImagenMaterialE {
+    position: relative;
+}
+#divImagenMaterialE a {
+    position: absolute;
+}
+#divImagenMaterialE a, #aHideImg {
+    bottom: 0;
+    right: 0;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2rem;
+    text-decoration: none;
+    margin-right: 4rem;
+}
+#aHideImg{
+    background-color: darkred;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+#divCambiarImg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form-label {
+    margin-right: 10px;
+}
+#formEditarMaterial input{
+    max-width: 500px;
+}
+/*#divCambiarImg, #divCambiarImg2{
+    display: none;
+}*/
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    h5{
+        font-size: 0.9rem;
+        margin:0;
+    }
+    h3 {
+        margin-top: 3rem;
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        padding: 17px 7px;
+    }
+
+    #tablaClientes thead th,#tablaPlataformas thead th,
+    #tablaMateriales thead th, #tablaUsuarios thead th,
+    #tablaClientes tbody td, #tablaPlataformas tbody td,
+    #tablaMateriales tbody td, #tablaUsuarios tbody td{
+     font-size: 0.7rem;
+    }
+
+    #tablaClientes tbody td,#tablaPlataformas tbody td,
+    #tablaMateriales tbody td, #tablaUsuarios tbody td {
+       width: 1%;
+        font-size: 0.7rem;
+    }
+
+    table.dataTable{
+        width: 100% !important;
+    }
+    div.dataTables_wrapper div.dataTables_filter label,
+    div.dataTables_wrapper div.dataTables_length label,
+    .dataTables_filter input{
+        font-size: 0.7rem !important;
+    }
+    .page-link,  div.dataTables_wrapper div.dataTables_info, .btn{
+        font-size: 0.6rem !important;
+    }
+
+    #tablaMateriales .btnDesactivar,
+    #tablaUsuarios .btnDesactivar {
+        margin-left: 0;
+        margin-top: 0.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    h5{
+        font-size: 0.8rem;
+        margin:0;
+    }
+    h3 {
+        margin-top: 3rem;
+        font-size: 1.2rem;
+    }
+    nav ul li a {
+        padding: 17px 7px;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #tablaClientes tbody td, #tablaPlataformas tbody td,
+    #tablaMateriales tbody td, #tablaUsuarios tbody td {
+        font-size: 0.6rem;
+    }
+    #tablaClientes thead th,#tablaPlataformas thead th,
+    #tablaMateriales thead th, #tablaUsuarios thead th{
+        font-size: 0.6rem;
+    }
+    #tablaClientes button span,#tablaPlataformas button span,
+    #tablaMateriales button span, #tablaUsuarios button span{
+        display: none;
+    }
+    div.dataTables_wrapper div.dataTables_filter label,
+    div.dataTables_wrapper div.dataTables_length label,
+    .dataTables_filter input{
+        font-size: 0.6rem !important;
+    }
+    .page-link,  div.dataTables_wrapper div.dataTables_info, .btn{
+        font-size: 0.5rem !important;
+    }
+
+
+    #tablaMateriales .btnDesactivar,
+    #tablaUsuarios .btnDesactivar {
+        margin-left: 0;
+        margin-top: 0.3rem;
+    }
+
+    table.dataTable{
+        width: 100% !important;
+    }
+}
+
+table tbody td:first-child {
+    padding-left: 0;
+}
